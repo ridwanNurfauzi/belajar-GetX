@@ -6,6 +6,8 @@ import '../modules/counter/bindings/counter_binding.dart';
 import '../modules/counter/views/counter_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/invoice/bindings/invoice_binding.dart';
+import '../modules/invoice/views/invoice_view.dart';
 import '../modules/profil/bindings/profil_binding.dart';
 import '../modules/profil/views/profil_view.dart';
 
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.BIODATA,
       page: () => BiodataView(),
       binding: BiodataBinding(),
+    ),
+    GetPage(
+      name: _Paths.INVOICE,
+      page: () => InvoiceView(),
+      binding: InvoiceBinding(),
     ),
   ];
 }
