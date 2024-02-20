@@ -21,11 +21,13 @@ class InvoiceOutput extends StatelessWidget {
               Text("Nama Lengkap: ${dataController.fullname}"),
               Text("Tempat Lahir: ${dataController.placeOfBirth}"),
               Text("Tanggal Lahir: ${dataController.dateOfBirth}"),
+              Text("Umur: ${dataController.getAge()}"),
               Text("Gender: ${dataController.gender}"),
               Text("Email: ${dataController.email}"),
               Text("Kebangsaan: ${dataController.nationality}"),
               Text("Jenis Keanggotaan: ${dataController.typeOfMember}"),
               Text("Nomor Kartu: ${dataController.cardNumber}"),
+              Text("Tanggal Kadaluarsa: ${dataController.expiredDate}"),
               Text("Harga: ${dataController.payment}"),
               Text("Benefit: ${dataController.benefits}"),
               ElevatedButton(

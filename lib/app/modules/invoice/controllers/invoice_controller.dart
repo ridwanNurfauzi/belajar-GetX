@@ -37,7 +37,8 @@ class InvoiceController extends GetxController {
     {
       "name": "VIP",
       "price": 500000,
-      "benefits": "Anggota 3 Bulan + cemilan gratis + Free Wi-Fi + tiket konser",
+      "benefits":
+          "Anggota 3 Bulan + cemilan gratis + Free Wi-Fi + tiket konser",
     },
   ];
 
@@ -67,5 +68,13 @@ class InvoiceController extends GetxController {
       final formattedDate = DateFormat('yyyy-MM-dd').format(picked);
       expiredDate.value = formattedDate;
     }
+  }
+
+  int getAge() {
+    var now = DateTime.now();
+    var birthDate = DateTime.parse(dateOfBirth.toString());
+
+    var age = now.year - birthDate.year;
+    return age;
   }
 }
