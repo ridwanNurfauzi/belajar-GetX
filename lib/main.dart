@@ -4,7 +4,14 @@ import 'package:get/get.dart';
 
 import 'app/routes/app_pages.dart';
 
-void main() {
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+
+void main(List<String> args) {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
+  FlutterNativeSplash.remove();
+
   runApp(
     GetMaterialApp(
       title: "Application",
